@@ -1,5 +1,4 @@
-require('smoothscroll-polyfill').polyfill();
-window.__forceSmoothScrollPolyfill__ = true;
+import $ from 'jquery'
 
 function scrollIntoCenter(elem, options) {
 
@@ -21,7 +20,7 @@ function scrollIntoCenter(elem, options) {
     var targetX = container[isContainer ? 'scrollLeft' : 'scrollX'] + (rect.left - (isContainer ? containerRect.left : 0)) - ((container[isContainer ? 'clientWidth' : 'innerWidth']) - elem.offsetWidth) * options.horizontal;
 
     // Scroll.
-    container.scroll(targetX, targetY);
+    $(container).animate({scrollTop: targetY, scrollLeft: targetX});
 
     // If window is inside a frame, center that frame in the parent window. Recursively.
     if (!isContainer && container.parent !== container) {
