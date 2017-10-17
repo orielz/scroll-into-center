@@ -1,4 +1,5 @@
 require('smoothscroll-polyfill').polyfill();
+window.__forceSmoothScrollPolyfill__ = true;
 
 function scrollIntoCenter(elem, options) {
 
