@@ -1,6 +1,12 @@
-import $ from 'jquery'
+var $ = require('jquery');
 
-function scrollIntoCenter(elem, options) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function scrollIntoCenter(elem, options) {
 
     // Read options.
     if (options === undefined)  options = {};
@@ -29,6 +35,6 @@ function scrollIntoCenter(elem, options) {
         scrollIntoCenter.call(frame, options);
     }
 
-}
+};
 
-module.exports = scrollIntoCenter;
+module.exports = exports['default'];
